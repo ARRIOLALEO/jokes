@@ -13,13 +13,17 @@ const getAllProducts = async() =>{
         console.log(product)
         const newProduct = document.createElement("div")
         const title = document.createElement("h4")
+        const description = document.createElement("p")
         const image = document.createElement("img")
         image.src = product.image
         image.style.maxWidth= "150px"
         title.innerHTML = product.title
+        description.innerHTML = product.description
         newProduct.append(title);
         newProduct.append(image);
+        newProduct.append(description)
         products.append(newProduct);
+
         products.classList.add("container__products")
         newProduct.classList.add("container__products--product")
     });
